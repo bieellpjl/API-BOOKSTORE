@@ -1,4 +1,4 @@
-import autorModel from "../models/autorModel";
+import autorModel from "../models/autorModel.js";
 
 export const cadastrarAutor = async (req, res) => {
     const { nome, biografia, data_nascimento, nacionalidade} = req.body;

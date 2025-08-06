@@ -6,7 +6,7 @@ import { conn } from "./config/sequelize.js";
 import autorModel from "./models/autorModel.js";
 
 //ROTAS
-import autorRoutes from "../src/routes/autorRoutes.jss"
+import autorRoutes from "../src/routes/autorRoutes.js"
 
 const app = express()
 app.use(cors({
