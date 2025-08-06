@@ -1,1 +1,21 @@
-### rotas do sistema da biblioteca
+### rotas sistema da biblioteca
+### AUTORES
+### Listar todos os livros
+GET /api/autores
+
+### Buscar livro por ID
+GET /api/autores/:id
+
+### Criar novo livro
+POST /api/autores
+Content-Type: application/json
+{}
+
+### Atualizar livro
+
+PUT /api/autores/:id
+Content-Type: application/json
+{}
+
+### Deletar livro
+DELETE /api/autores/:id

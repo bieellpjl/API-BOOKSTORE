@@ -5,6 +5,9 @@ import { conn } from "./config/sequelize.js";
 // tabelas
 import autorModel from "./models/autorModel.js";
 
+//ROTAS
+import autorRoutes from "../src/routes/autorRoutes.jss"
+
 const app = express()
 app.use(cors({
     origin: "*",
@@ -19,7 +22,7 @@ conn
     .then(() => {
         console.log("Banco de dados conectado 👌")
     })
-
+app.use("/api/autores", autorRoutes);
 app.get("/", (req, res) => {
     res.status(200).json({ mensagem: "Olá, mundo!"})
 });
