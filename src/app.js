@@ -1,5 +1,6 @@
 import express, { response } from "express";
 import cors from "cors";
+import { conn } from "./config/sequelize.js";
 
 const app = express()
 app.use(cors({
@@ -9,6 +10,8 @@ app.use(cors({
 })
 );
 app.use(express.json())
+
+conn.sync()
 
 app.get("/", (req, res) => {
     res.status(200).json({ mensagem: "Olá, mundo!"})
