@@ -8,24 +8,28 @@ export const cadastrarAutor = async (req, res) => {
             erro: "Campo nome inválido",
             mensagem: "o campo nome não pode ser nulo"
         })
+        return
     }
      if(!biografia){
         res.status(400).json({
             erro: "Campo biografia inválido",
             mensagem: "o campo biografia não pode ser nulo"
         })
+        return
     }
      if(!data_nascimento){
         res.status(400).json({
             erro: "Campo nome inválido",
             mensagem: "o campo data_nascimento não pode ser nulo"
         })
+        return
     }
      if(!nacionalidade){
         res.status(400).json({
             erro: "Campo nome inválido",
             mensagem: "o campo nacionalidade não pode ser nulo"
         })
+        return
     }
     const validaData = new Date(data_nascimento)
     if(validaData == 'invalid Date'){
